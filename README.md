@@ -14,4 +14,4 @@ things I had in mind
 >images that fit the colors
 
 
-* not yet fully responsive *
+* not yet fully responsive, or functional *
