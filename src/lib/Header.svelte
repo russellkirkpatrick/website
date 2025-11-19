@@ -1,0 +1,55 @@
+<script>
+  import { page } from '$app/stores';
+  
+  let filepath = []
+  let paths = {}
+
+  $: {
+    filepath = $page.url.pathname.split("/").slice(1)
+    paths = {"/": "russell"}
+    let current = ""
+
+    for (const part of filepath) {
+      current += "/" + part
+      paths[current] = part
+    }
+  }
+
+  $: labels = Object.values(paths);
+</script>
+
+<header>
+  <img src="/images/russimg.jpg" id="user-pfp"/>
+  {#each Object.entries(paths) as [key, value], i}
+    <a href={key} class="left-nav">{value}</a>
+    {#if i < Object.entries(paths).length - 1}
+      <p>&nbsp;/</p>
+    {/if}
+  {/each} 
+</header>
+
+
+<style>
+  header {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-left: 23px;
+  }
+
+
+  p {
+    font-size: 15px;
+  }
+
+  .left-nav {
+    margin-left: 15px;
+  }
+
+  #user-pfp {
+    height: 35px;
+    width: 35px;
+    border-radius: 100px;
+    object-fit: cover;
+  }
+</style>
