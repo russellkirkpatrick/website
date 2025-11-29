@@ -1,5 +1,6 @@
 <script>
   import { page } from '$app/stores';
+  import { base } from '$app/paths';
   
   let filepath = []
   let paths = {}
@@ -19,7 +20,7 @@
 </script>
 
 <header>
-  <img src="/images/russimg.jpg" id="user-pfp"/>
+  <img src="{base}/images/russimg.jpg" id="user-pfp"/>
   {#each Object.entries(paths) as [key, value], i}
     <a href={key} class="left-nav">{value}</a>
     {#if i < Object.entries(paths).length - 1}
@@ -27,7 +28,6 @@
     {/if}
   {/each} 
 </header>
-
 
 <style>
   header {

@@ -5,7 +5,7 @@
     <img src="./images/russimg.jpg" id="user-pfp" />
     <p>Russell Kirkpatrick</p>
     <p>Software engineer & designer</p> 
-    <p>nyc</p>
+    <p>Nyc</p>
   </div>
 
   <div id="sections-container">
