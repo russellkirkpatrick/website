@@ -1,33 +1,39 @@
+<script>
+import { base } from '$app/paths';
+</script>
+
 <div id="projects-container">
-  <a href="https://github.com/russellkirkpatrick" target="_blank">
-    <img class="icons" src="/images/github.jpg" />
-  </a>
+  <div class="projects">
+    <a href="{base}/github.com/russellkirkpatrick" target="_blank">
+      <img class="icons" src="/images/github.jpg" />
+    </a>
+  </div>
+
+  <div class="projects">
+    <a href="{base}/projects/lisbon">Lison City Metrics</a>
+  </div>
+
+  <div class="projects">
+    <a href="{base}/projects/gridify">Gridify</a>
+  </div>
   
   <div class="projects">
-    <a href="/projects/lisbon">Lison City Metrics</a>
-  </div>
-
-  <div class="projects">
-    <a href="/projects/gridify">Gridify</a>
-  </div>
-  
-  <div class="projects">
-    <a href="/projects/web">music web</a>
+    <a href="{base}/projects/web">music web</a>
     <span class="left-spacing">🚧</span>
   </div>
 
   <div class="projects">
-    <a href="/projects/jeans">jeans</a>
+    <a href="{base}/projects/jeans">jeans</a>
     <span class="left-spacing">🚧</span>
   </div>
 
   <div class="projects">
-    <a href="/projects/winery">winery</a>
+    <a href="{base}/projects/winery">winery</a>
     <span class="left-spacing">🚧</span>
   </div>
 
   <div class="projects">
-    <a href="/projects/pinterest">pinterest profile widget</a>
+    <a href="{base}/projects/pinterest">pinterest profile widget</a>
     <span class="left-spacing">🚧</span>
   </div>
 

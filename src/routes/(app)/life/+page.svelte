@@ -1,5 +1,9 @@
+<script>
+import { base } from '$app/paths';
+</script>
+
 <div id="life-container">
-  <p>I grew up outside Philadelphia, studied CS @ Pitt, and currently relocating to NYC after graduating. I'm into climbing, skiing, and music. I am always creating something and I'll try to update <a href="/projects">/projects</a> or <a href="blog">/blog</a>. Feel free to message me -- I'm always down to grab a coffee.</p>
+  <p>I grew up outside Philadelphia, studied CS @ Pitt, and currently relocating to NYC after graduating. I'm into climbing, skiing, and music. I am always creating something and I'll try to update <a href="{base}/projects">/projects</a> or <a href="{base}/blog">/blog</a>. Feel free to message me -- I'm always down to grab a coffee.</p>
   <br>
   
   <div class="icon-container">

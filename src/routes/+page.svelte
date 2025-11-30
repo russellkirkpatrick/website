@@ -1,5 +1,9 @@
 <!-- Home Page -->
 
+<script>
+import { base } from '$app/paths';
+</script>
+
 <div id="container">
   <div id="user-container">
     <img src="./images/russimg.jpg" id="user-pfp" />
@@ -9,10 +13,10 @@
   </div>
 
   <div id="sections-container">
-    <a href="/projects">projects</a>
-    <a href="/work">work</a>
-    <a href="/life">life</a>
-    <a href="/blog">blog</a>
+    <a href="{base}/projects">projects</a>
+    <a href="{base}/work">work</a>
+    <a href="{base}/life">life</a>
+    <a href="{base}/blog">blog</a>
   </div>
 </div>
 
