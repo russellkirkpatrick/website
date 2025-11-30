@@ -9,7 +9,7 @@ const config = {
       fallback: '404.html'
     }),
     paths: {
-      base: dev ? '' : '/website' // repo name
+      base: dev ? '' : '/website' // repo name ONLY
     },
     prerender: {
       entries: ['*']

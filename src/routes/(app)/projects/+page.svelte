@@ -4,7 +4,7 @@ import { base } from '$app/paths';
 
 <div id="projects-container">
   <div class="projects">
-    <a href="{base}/github.com/russellkirkpatrick" target="_blank">
+    <a href="github.com/russellkirkpatrick" target="_blank">
       <img class="icons" src="/images/github.jpg" />
     </a>
   </div>
