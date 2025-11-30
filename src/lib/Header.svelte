@@ -2,17 +2,17 @@
   import { page } from '$app/stores';
   import { base } from '$app/paths';
   
-  let filepath = []
-  let paths = {}
+  let filepath = [];
+  let paths = {};
 
   $: {
-    filepath = $page.url.pathname.split("/").slice(1)
-    paths = {"/": "russell"}
-    let current = ""
+    filepath = $page.url.pathname.replace(base, "").split("/").filter(Boolean);
+    paths = { [base || "/"]: "russell" };
+    let current = base || "";
 
     for (const part of filepath) {
-      current += "/" + part
-      paths[current] = part
+      current += "/" + part;
+      paths[current] = part;
     }
   }
 
