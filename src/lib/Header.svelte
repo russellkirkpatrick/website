@@ -6,12 +6,13 @@
   let paths = {};
 
   $: {
-    filepath = $page.url.pathname.replace(base, "").split("/").filter(Boolean);
-    paths = { [base || "/"]: "russell" };
-    let current = base || "";
+    const withoutBase = $page.url.pathname.slice(base.length) || '/';
+    filepath = withoutBase.split('/').filter(Boolean);
+    paths = { '/': 'russell' };
+    let current = '';
 
     for (const part of filepath) {
-      current += "/" + part;
+      current += '/' + part;
       paths[current] = part;
     }
   }
@@ -20,13 +21,13 @@
 </script>
 
 <header>
-  <img src="{base}/images/russimg.jpg" id="user-pfp"/>
+  <img src={base + '/images/russimg.jpg'} id="user-pfp" />
   {#each Object.entries(paths) as [key, value], i}
-    <a href={key} class="left-nav">{value}</a>
+    <a href={base + key} class="left-nav">{value}</a>
     {#if i < Object.entries(paths).length - 1}
       <p>&nbsp;/</p>
     {/if}
-  {/each} 
+  {/each}
 </header>
 
 <style>
